@@ -17,10 +17,10 @@ export default function Header() {
             Home
           </Link>
           <Link
-            href="/about"
+            href="/login"
             className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
           >
-            About
+            login
           </Link>
           <Link
             href="/services"
