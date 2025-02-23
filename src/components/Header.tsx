@@ -1,41 +1,43 @@
-// /components/Header.tsx
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+import { Button } from './ui/button'; // shadcn/ui Button
 
-export default function Header() {
+const Header = () => {
   return (
-    <header className="w-full bg-white dark:bg-gray-800 shadow">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-xl font-bold text-gray-800 dark:text-white">
-          <Link href="/">FarmLink</Link>
+    <header className="fixed top-0 w-full bg-white shadow-sm z-50">
+      <div className="container mx-auto flex items-center justify-between px-6 py-4">
+        {/* Company Name */}
+        <Link href="/" className="text-2xl font-dm-serif text-black">
+          Smart Farm
+        </Link>
+
+        {/* Navigation and Buttons */}
+        <div className="flex items-center gap-6">
+          {/* Getting Started and Solutions Buttons */}
+          <div className="flex items-center gap-4">
+            <Button variant="ghost" className="text-black hover:bg-gray-100">
+              Getting Started
+            </Button>
+            <Button variant="ghost" className="text-black hover:bg-gray-100">
+              Solutions
+            </Button>
+          </div>
+
+          {/* Separator */}
+          <div className="h-6 w-px bg-gray-300" />
+
+          {/* Login and Register Buttons */}
+          <div className="flex items-center gap-4">
+            <Button variant="ghost" className="text-black hover:bg-gray-100">
+              Login
+            </Button>
+            <Button variant="default" className="bg-black text-white rounded-full hover:bg-black/90">
+              Register
+            </Button>
+          </div>
         </div>
-        <nav className="space-x-4">
-          <Link
-            href="/"
-            className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-          >
-            Home
-          </Link>
-          <Link
-            href="/login"
-            className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-          >
-            login
-          </Link>
-          <Link
-            href="/services"
-            className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-          >
-            Services
-          </Link>
-          <Link
-            href="/contact"
-            className="text-gray-600 hover:text-gray-900 dark:text-gray-300 dark:hover:text-white"
-          >
-            Contact
-          </Link>
-        </nav>
       </div>
     </header>
   );
-}
+};
+
+export default Header;
