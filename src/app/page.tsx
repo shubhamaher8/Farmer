@@ -1,5 +1,5 @@
 // /app/page.tsx
-import Header from '@/components/Header';
+import { Header } from '@/components/Header';
 import Footer from '@/components/Footer';
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 
@@ -10,7 +10,7 @@ export default function Home() {
       <main className="flex-grow bg-[#f8f8f8] dark:bg-[#121212]">
         {/* Hero Section with CTA */}
         <section
-          className="relative bg-gradient-to-r from-blue-200 to-cyan-200 h-96"
+          className="relative bg-gradient-to-l from-orange-50 to-orange-100 h-96"
         >
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
