@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
+import { Header } from "@/components/Header"; // Import your Header component
+import Footer from "@/components/Footer"; // Import your Footer component
+import React from 'react'; // Import React if not already present
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,9 +34,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${dmSerifDisplay.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${dmSerifDisplay.variable} antialiased flex flex-col min-h-screen`} // Added flex and min-h-screen
       >
-        {children}
+        <Header /> {/* Include the Header */}
+        <main className="flex-grow pt-12"> {/* Added main and flex-grow */}
+          {children}
+        </main>
+        <Footer /> {/* Include the Footer */}
       </body>
     </html>
   );
