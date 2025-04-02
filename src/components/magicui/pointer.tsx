@@ -98,7 +98,7 @@ interface PointerProps {
  * @component
  * @param {PointerProps} props - The component props
  */
-function Pointer({ x, y }: PointerProps): JSX.Element {
+function Pointer({ x, y }: PointerProps): React.ReactElement {
   return (
     <motion.div
       className="pointer-events-none absolute z-50 h-4 w-4 rounded-full"
