@@ -34,9 +34,9 @@ export function RootLayout({
 // app/page.tsx
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
 
-function Home() {
+export default function Home() {
   return (
-    <main className="flex-grow bg-[#f8f8f8] dark:bg-[#121212]">
+    <div className="bg-[#f8f8f8] dark:bg-[#121212]">
       {/* Hero Section with CTA */}
       <section
         className="relative bg-gradient-to-l from-orange-50 to-orange-100 h-96"
@@ -84,8 +84,6 @@ function Home() {
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }
-
-export default Home;
